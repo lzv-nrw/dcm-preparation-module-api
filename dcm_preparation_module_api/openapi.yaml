@@ -5,7 +5,7 @@ info:
     This is the OpenAPI 3.0 specification describing Preparation Module-containers.
     A Preparation Module-container prepares an IP (Information Package) for
     SIP (Submission Information Package) transformation by a SIP Builder-container.
-  version: 0.1.0
+  version: 0.2.0
 servers:
   - url: 'http://localhost:8080/'
 externalDocs:
@@ -136,6 +136,13 @@ paths:
                           - $ref: '#/components/schemas/FindAndReplaceLiteralOperation'
                   required:
                     - target
+                token:
+                  type: string
+                  description:
+                    idempotency identifier; if submitted previously, returns
+                    the associated job token; otherwise uses this value as
+                    new token's value
+                  example: 37ee72d6-80ab-4dcd-a68d-f8d32766c80d
                 callbackUrl:
                   $ref: '#/components/schemas/CallbackUrl'
               required:

@@ -3,7 +3,7 @@ from setuptools import setup
 
 
 setup(
-    version="0.1.0",
+    version="0.2.0",
     name="dcm-preparation-module-api",
     description="api for preparation-module-containers",
     author="LZV.nrw",
